@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en"> 
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="it=edge">
+    <script src="https://kit.fontawesome.com/2745819f47.js" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/scrollreveal/dist/scrollreveal.min.js"></script>
+	<link href="https://fonts.googleapis.com/css?family=Catamaran&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/menu.css">
+	<title>德州新冠病毒资源中心</title>
+</head>
+<body id="home">
+  <div class="menu-wrap">
+    <input type="checkbox" class="toggler">
+    <div class="hamburger"><div></div></div>
+    <div class="menu">
+      <div>
+        <div>
+          <ul>
+            <li><a href="index.html">关于我们</a></li>
+            <li><a href="about.html">当地利益</a></li>
+            <li><a href="testing.html">新冠病毒测试</a></li>
+            <li><a href="merch.html">关于新冠病毒的资料</a></li>
+            <li><a href="unemployment.html">申请失业金</a></li>
+            <li><a href="terms.html">应用条件</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+	<nav class="navbar">
+		<div class="container">
+      <h1 class="logo">德州新冠病毒资源中心</h1>
+			<ul class="nav">
+				<li><a href="index.html">关于</a></li>
+                <li><a href="unemployment.html">失业金</a></li>
+                <li><a href="testing.html">病毒测试</a></li>
+                <li><a href="merch.html">关于病毒</a></li>
+			</ul>
+        </div>
+	</nav>
+
+
+	<section class="section-a">
+      <div class="container">
+        <div class="sectiona-left">
+          <h1>希望能够帮助您</h1>
+          <p>
+            该站点仅用作新冠病毒大流行期间的信息和资源中心。 如果需要英文或西班牙文网站，请点击下面的按钮。
+          </p>
+          <a href="index.html" class="btn">English</a>
+          <a href="readmore.html" class="btn">Español</a>
+        </div>
+        <img src="img/1.jpg" alt="" />
+      </div>
+    </section>
+
+    <section id="about" class="section-b">
+      <div class="overlay">
+        <div class="section-b-inner py-5">
+          <h3 class="text-2">我们的目标</h3>
+          <h2 class="text-5 mt-1">在这个困难的期间帮助德州的居民</h2>
+        </div>
+      </div>
+    </section>
+
+    <footer class="section-footer py-4 bg-primary">
+      <div class="container">
+        <div>
+          <h2 class="text-2 mb-1">我们的社交媒体</h2>
+          <a href="http://twitter.com" target="_blank">
+            <i class="fab fa-twitter fa-2x"></i>
+          </a>
+          <a href="http://facebook.com" target="_blank">
+            <i class="fab fa-facebook fa-2x"></i>
+          </a>
+          <a href="http:instagram.com/texasadventuretime/" target="_blank">
+            <i class="fab fa-instagram fa-2x"></i>
+          </a>
+        </div>
+        <div>
+          <h3>资源</h3>
+          <ul>
+            <li><a href="#">新冠病毒测试</a></li>
+            <li><a href="about.html">当地资源</a></li>
+            <li><a href="https://utexas.campuslabs.com/engage/organization/texasadventuretime" target="_blank">申请失业金</a></li>
+            <li><a href="terms.html">应用条件</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3>新冠病毒的资料</h3>
+          <ul>
+            <li><a href="https://www.cdc.gov/coronavirus/2019-ncov/index.html">疾病预防控制中心</a></li>
+            <li><a href="https://www.cdc.gov/coronavirus/2019-ncov/downloads/2019-ncov-factsheet.pdf">新冠病毒说明书</a></li>
+            <li><a href="https://www.hopkinsmedicine.org/health/conditions-and-diseases/coronavirus">更多新冠病毒的资料</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3>城市</h3>
+          <ul>
+            <li><a href="austinpage.html">奥斯丁</a></li>
+            <li><a href="houstonpage.html">休斯顿</a></li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+    
+    <script>
+        window.sr = ScrollReveal();
+        sr.reveal('.navbar', {
+          duration: 2000,
+          origin:'bottom'
+        });
+        sr.reveal('.sectiona-left', {
+          duration: 2000,
+          origin:'bottom',
+          distance:'300px'
+        });
+        sr.reveal('.btn', {
+          duration: 2000,
+          origin:'top',
+          delay: 1500
+        });
+        sr.reveal('.menu-wrap', {
+          duration: 2000,
+          origin:'left'
+        });
+        sr.reveal('.overlay', {
+          duration: 2000,
+          origin:'bottom',
+          delay: 1000
+        });
+    </script>
+</body>
+</html>

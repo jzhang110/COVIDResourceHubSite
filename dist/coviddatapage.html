@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en"> 
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="it=edge">
+    <script src="https://kit.fontawesome.com/2745819f47.js" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/93c64944b0.js" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/scrollreveal/dist/scrollreveal.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+
+
+    <script>
+        $(document).ready(function(){
+          $(".default_option").click(function(){
+            $(".dropdown ul").toggleClass("active");
+          });
+          $(".dropdown ul li").click(function(){
+            var text = $(this).text();
+            $(".default_option").text(text);
+            $(".dropdown ul").removeClass("active");
+          })
+          $("#searchicon").click(function(){
+            console.log("hello")
+            $.getJSON('http://localhost:8080/coviddata/getall', function(data) {
+              console.log(data)
+            });
+          })
+        });
+    </script>
+
+	<link href="https://fonts.googleapis.com/css?family=Catamaran&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/coviddatapage.css">
+  <link rel="stylesheet" href="css/menu.css">
+	<title>COVID Data</title>
+</head>
+<body id="home">
+  <div class="menu-wrap">
+    <input type="checkbox" class="toggler">
+    <div class="hamburger"><div></div></div>
+    <div class="menu">
+      <div>
+        <div>
+          <ul>
+            <li><a href="index.html">About us</a></li>
+            <li><a href="about.html">Testing infomration</a></li>
+            <li><a href="testing.html">Local benefits</a></li>
+            <li><a href="merch.html">Unemployment information</a></li>
+            <li><a href="unemployment.html">Virus information</a></li>
+            <li><a href="terms.html">Terms and conditions</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+	<nav class="navbar">
+		<div class="container">
+      <h1 class="logo">COVID-19 TX Resource Hub</h1>
+			<ul class="nav">
+				<li><a href="index.html">Home</a></li>
+                <li><a href="unemployment.html">About</a></li>
+			</ul>
+        </div>
+	</nav>
+
+
+	<section class="section-a">
+      <div class="container">
+        <div class="sectiona-left">
+          <h1>Texas COVID Infection Data </h1>
+          <a href="chinese.html" class="btn">中文</a>
+          <a href="readmore.html" class="btn">Español</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="searchbar">
+        <div class="wrapper">
+            <div class="search_box">
+                <div class="dropdown">
+                    <div class="default_option">All</div>  
+                    <ul>
+                      <li>All</li>
+                      <li>Recent</li>
+                      <li>Popular</li>
+                    </ul>
+                </div>
+                <div class="search_field">
+                  <input type="text" class="input" placeholder="Enter your county here">
+                  <i class="fas fa-search" id="searchicon"></i>
+              </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="section-footer py-4 bg-primary">
+      <div class="container">
+        <div>
+          <h2 class="text-2 mb-1">Find us on social media</h2>
+          <a href="http://twitter.com" target="_blank">
+            <i class="fab fa-twitter fa-2x"></i>
+          </a>
+          <a href="http://facebook.com" target="_blank">
+            <i class="fab fa-facebook fa-2x"></i>
+          </a>
+          <a href="http:instagram.com/texasadventuretime/" target="_blank">
+            <i class="fab fa-instagram fa-2x"></i>
+          </a>
+        </div>
+        <div>
+          <h3>Resources</h3>
+          <ul>
+            <li><a href="#">COVID Testing</a></li>
+            <li><a href="about.html">Local Resources</a></li>
+            <li><a href="https://utexas.campuslabs.com/engage/organization/texasadventuretime" target="_blank">Unemployment Information</a></li>
+            <li><a href="terms.html">Terms of Service</a></li>
+          </ul>
+        </div>
+        <div>
+            <h3>Virus information</h3>
+            <ul>
+              <li><a href="https://www.cdc.gov/coronavirus/2019-ncov/index.html">CDC - Coronavirus</a></li>
+              <li><a href="https://www.cdc.gov/coronavirus/2019-ncov/downloads/2019-ncov-factsheet.pdf">CDC - Coronavirus fact sheet</a></li>
+              <li><a href="https://www.hopkinsmedicine.org/health/conditions-and-diseases/coronavirus">Coronavirus info - Johns Hopkins</a></li>
+          </ul>
+        </div>
+        <div>
+            <h3>City</h3>
+            <ul>
+              <li><a href="austinpage.html">Austin</a></li>
+              <li><a href="houstonpage.html">Houston</a></li>
+            </ul>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+        window.sr = ScrollReveal();
+        sr.reveal('.navbar', {
+          duration: 2000,
+          origin:'bottom'
+        });
+        sr.reveal('.sectiona-left', {
+          duration: 2000,
+          origin:'bottom',
+          distance:'300px'
+        });
+        sr.reveal('.btn', {
+          duration: 2000,
+          origin:'top',
+          delay: 1500
+        });
+        sr.reveal('.menu-wrap', {
+          duration: 2000,
+          origin:'left'
+        });
+        sr.reveal('.overlay', {
+          duration: 2000,
+          origin:'bottom',
+          delay: 1000
+        });
+        sr.reveal('.box', {
+          duration: 2000,
+          origin:'bottom',
+          distance:'300px',
+          delay: 2000
+        });
+    </script>
+</body>
+</html>
